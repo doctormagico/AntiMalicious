@@ -20,7 +20,7 @@ $editMessage[$getGlobalUserVar[TemporallyUserCommandMessageID];{newEmbed:{field:
 $ubfb#getBoolean[$findUser[$message]]
 Reason: $ubfb#getReason[$findUser[$message]]
 \`\`\`:no}
-{field:Creation Date:\`\`\`$creationDate[$findUser[$message];date]\`\`\`:yes}
+{field:Creation Date:<t:$truncate[$divide[$creationDate[$findUser[$message];ms];1000]]:R>:yes}
 {color:RED}
 {image:$ubfb#getProof[$findUser[$message]]}
 {thumbnail:$userAvatar[$findUser[$message]]}}]
@@ -34,7 +34,7 @@ $editMessage[$getGlobalUserVar[TemporallyUserCommandMessageID];{newEmbed:{field:
 {field:Malicious User:\`\`\`
 $if[$ubfb#getBoolean[$findUser[$message]]==;false;]
 \`\`\`:no}
-{field:Creation Date:\`\`\`$creationDate[$findUser[$message];date]\`\`\`:yes}
+{field:Creation Date:<t:$truncate[$divide[$creationDate[$findUser[$message];ms];1000]]:R>:yes}
 {color:GREEN}
 {thumbnail:$userAvatar[$findUser[$message]]}}]
 `
